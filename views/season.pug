@@ -3,16 +3,18 @@ html
     link(rel="stylesheet" href="/css/styles.css")
   body 
       h1 Kim's Convenience
-        h2= "Season " + season.number 
-      table
-          tr
-            th No
-            th Title
-            th Director
-          for episode in season.episodes
+      div  
+          h3= "Season " + season.number 
+          table
             tr
-              td= episode.number
-              td= episode.title
-              td= episode.director
-         
-                 
+              th No
+              th Title
+              th Director
+            for episode in season.episodes
+              tr
+                td= episode.number
+                td= episode.title
+                td= episode.director
+              tr
+                td(colspan="3")= episode.synopsis
+                  
