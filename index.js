@@ -10,6 +10,13 @@ app.use(express.static('public'))
 app.get('/', (request, response) => {
   return response.render('index', { showdata })
 })
+
+app.get('/season/:number', (request, response) => {
+  const season = showdata.seasons.find((season) => season.number === parseInt(request.params.number))
+
+  return response.render('season', { season })
+})
+
 app.all('*', (request, response) => {
   return response.sendStatus(404)
 })
