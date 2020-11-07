@@ -3,6 +3,7 @@ html
     link(rel="stylesheet" href="/css/styles.css")
   body 
       h1= showdata.title
+      div(id= "indexdiv")
        h2 Developed By
        ul
         for dev in showdata.developedBy
@@ -15,5 +16,5 @@ html
        ul
          for season in showdata.seasons
            li
-              a(href=`/season/${season.number}`)= "season " + season.number
+              a(href=`/season/${season.number}`)= "Season " + season.number
   
