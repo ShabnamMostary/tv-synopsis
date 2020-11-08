@@ -14,7 +14,11 @@ app.get('/', (request, response) => {
 app.get('/season/:number', (request, response) => {
   const season = showdata.seasons.find((season) => season.number === parseInt(request.params.number))
 
-  return response.render('season', { season })
+  if (season) {
+    return response.render('season', { season })
+  } else { // return status 404 when season is undefined
+    return response.sendStatus(404)
+  }
 })
 
 app.all('*', (request, response) => {
@@ -23,5 +27,5 @@ app.all('*', (request, response) => {
 
 
 app.listen(1337, () => {
-  console.log('Listening on 1337...') // eslint-disable-line no-console
+  console.log('Listening on 1337...')// eslint-disable-line no-console
 })

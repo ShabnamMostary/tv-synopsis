@@ -1,23 +1,43 @@
+#indexdiv {
+  padding: 0 25px;
+  font-weight: 500;
+
+}
+#indexdiv h2 {
+  text-align: left;
+}
 div {
   padding: 20px 100px;
 }
-#indexdiv {
-  padding: 0 25px;
-}
-h3 {
+h2 {
   text-align: center;
   margin-top:0;
 }
 table {
   border-collapse: collapse;
+  margin: auto;
+  width:80%;
 }
 table tr td {
-  border: 1px solid black;
-  text-align:center;
+  border: 2px solid black;
+  padding: 5px;
 }
 table th {
-  background-color: dodgerblue;
+  background-color: rgb(80, 164, 248);
+  padding:5px;
   text-align: center;
   color: white;
-  border:1px solid black
+  border:2px solid black
+}
+#center {
+  text-align: center;
+  width:5%
+}
+#left {
+  text-align: left;
+}
+.common {
+  text-align: left;
+  padding-left: 10px;
+
 }

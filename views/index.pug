@@ -4,17 +4,16 @@ html
   body 
       h1= showdata.title
       div(id= "indexdiv")
-       h2 Developed By
-       ul
-        for dev in showdata.developedBy
-          li= dev
-       h2 Starring
-       ul
-        for star in showdata.starring
-          li= star
-       h2 Seasons
-       ul
-         for season in showdata.seasons
-           li
+        h2 Developed By
+        ul
+          for dev in showdata.developedBy
+            li= dev
+        h2 Starring
+        ul
+          for star in showdata.starring
+            li= star
+        h2 Seasons
+        ul
+          for season in showdata.seasons
+            li 
               a(href=`/season/${season.number}`)= "Season " + season.number
-  

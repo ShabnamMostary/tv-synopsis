@@ -4,17 +4,17 @@ html
   body 
       h1 Kim's Convenience
       div  
-          h3= "Season " + season.number 
+          h2= "Season " + season.number 
           table
             tr
-              th No
+              th No.
               th Title
               th Director
             for episode in season.episodes
               tr
-                td= episode.number
-                td= episode.title
-                td= episode.director
+                td(id= "center")= episode.number
+                td(class= "common")= episode.title
+                td(class= "common")= episode.director
               tr
-                td(colspan="3")= episode.synopsis
+                td(id= "left" colspan="3")= episode.synopsis
                   
